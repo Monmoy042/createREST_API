@@ -4,9 +4,14 @@ const app = express();
 
 const PORT = process.env.PORT || 8000;
 
+const products_routes = require("./routes/products");
+
 app.get("/", (req, res) => {
   res.send("<h1>Hello World</h1>");
 });
+
+// middleware or set router
+app.use("/api/products", products_routes);
 
 const start = async () => {
   try {
