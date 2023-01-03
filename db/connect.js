@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 
-const uri =
-  "mongodb+srv://monmoy:Mn4lLgSmOIDOW8WX@productsapi.v3wty4s.mongodb.net/productsapi?retryWrites=true&w=majority";
-
-const connectDB = () => {
+const connectDB = (uri) => {
   console.log("DB is Connected");
   return mongoose.connect(uri, {
     useNewUrlParser: true,
